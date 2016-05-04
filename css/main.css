@@ -1,0 +1,17 @@
+path {
+    stroke: white;
+    stroke-width: 0.5px;
+    fill: grey;
+ }
+
+svg{
+	padding-left: 100px;
+}
+
+h1{
+	text-align: center;
+	padding-top: 50px;
+}
+form{
+	padding-left: 500px;
+}
