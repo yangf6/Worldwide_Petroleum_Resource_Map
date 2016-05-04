@@ -1,6 +1,4 @@
-/* Create a scatter plot of 1960 life expectancy (gdp) versus 2013 life expectancy (life_expectancy).
-		The variable "data" is accessible to you, as you read it in from data.js
-*/
+
 $(function() {
   // load data and display the map on the canvas with country geometries*/
   d3.json("world-110m.json", function(error, topology) {
@@ -132,9 +130,9 @@ $(function() {
       }else if(box.length == 2){
         currentData = filterData(box[0]);
         currentData = currentData.concat(filterData(box[1]));
+        draw(currentData,0);
         document.getElementById("display").innerHTML = 
         "there are " + currentData.length + " of " + box;
-        draw(currentData,0);
       }else if(box.length == 3){
         currentData = filterData(box[0]);
         currentData = currentData.concat(filterData(box[1]));
@@ -174,7 +172,6 @@ $(function() {
         countryData = allData.filter(function(d){
           return d.COUNTRY == country;
         });
-        alert(countryData.length)
         draw(countryData,0)
     })
     }); 
